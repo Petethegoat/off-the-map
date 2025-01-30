@@ -1,5 +1,10 @@
 # off-the-map
-Morrowind mod. Alternative to Get Lost with more features.
+Alternative to Get Lost with more features.
 
-DLL will be obsolete when this PR goes through:
-https://github.com/NullCascade/morrowind-mods/pull/75
+ - Removes local map.
+ - Prevents colouring of world map.
+ - Hides compass on world map.
+ - Prevents centering of world map.
+ - Saves world map position and zoom level.
+ - Compatible with and without UI Expansion.
+ - No mod config menu, no assets.
