@@ -1,0 +1,12 @@
+[package]
+name = "Off The Map"
+description = "Alternative to Get Lost with more features."
+repository = "https://github.com/Petethegoat/off-the-map"
+authors = [ "Pete Goodfellow",]
+version = "1.0.0"
+
+[dependencies]
+assets = [ "MWSE\\mods\\Off The Map" ]
+
+[dependencies.mwse]
+buildnumber = 4274
