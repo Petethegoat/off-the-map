@@ -29,6 +29,19 @@ local function onMenuMulti(e)
 end
 event.register(tes3.event.uiActivated, onMenuMulti, { filter = "MenuMulti" })
 
+-- duplicate here to make sure it works on new game.
+local function onMenuMap(e)
+	local mapMenu = tes3ui.findMenu("MenuMap")
+	if not mapMenu then return end
+
+	local player = mapMenu:findChild("MenuMap_world_player")
+	-- silly hack to make it invisible permanently.
+	player.scaleMode = true
+	player.width = 0
+	player.height = 0
+end
+event.register(tes3.event.uiActivated, onMenuMap, { filter = "MenuMap" })
+
 --- @param e menuEnterEventData
 local function onMenuMode(e)
 	local mapMenu = tes3ui.findMenu("MenuMap")
