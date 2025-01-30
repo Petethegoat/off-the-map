@@ -1,4 +1,4 @@
-# off-the-map
+# Off The Map
 Alternative to Get Lost with more features.
 
  - Removes local map.
