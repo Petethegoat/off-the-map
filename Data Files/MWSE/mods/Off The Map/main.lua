@@ -25,7 +25,11 @@ end
 
 --- @param e uiActivatedEventData
 local function onMenuMulti(e)
-	e.element:findChild("MenuMulti_map").visible = false
+	local map = e.element:findChild("MenuMulti_map")
+	map.autoHeight = true
+
+	-- map is made visible every frame outside of menuMode, so hide it like this.
+	map:findChild("MenuMap_panel").height = 0
 end
 event.register(tes3.event.uiActivated, onMenuMulti, { filter = "MenuMulti" })
 
