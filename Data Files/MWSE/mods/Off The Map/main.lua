@@ -103,3 +103,10 @@ local function saveCallback(e)
 	end
 end
 event.register(tes3.event.save, saveCallback)
+
+-- Thanks Qualia.
+if not tes3.hasCodePatchFeature(tes3.codePatchFeature.convenientDefaults) then
+	event.register(tes3.event.uiActivated, function(r)
+		r.element:findChild("MenuMap_switch"):triggerEvent(tes3.uiEvent.mouseClick)
+	end, { filter = "MenuMap" })
+end
